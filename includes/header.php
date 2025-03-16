@@ -10,4 +10,24 @@
     <title>Movie App PHP</title>
 </head>
 <body>
+    <!-- nav -->
+
+      <!-- nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    <a class="navbar-brand" href="">
+    <span>WPU MOVIE</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-exp>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link active" href="#">Search Movie</a>
+    </div>
+  </div>
+    </div>
+</nav>
+
+
     <div class="mt-5">

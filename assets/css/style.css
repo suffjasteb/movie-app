@@ -1,0 +1,59 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: white;
+    font-style: bold;
+}
+
+/* Container for movies */
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Movie card */
+.movie-card {
+    background-color: #1e1e1e;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Movie card hover effect */
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Movie poster */
+.movie-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn-back {
+    padding: 10px 20px;
+}
+
+/* Movie title */
+.movie-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+/* Movie year */
+.movie-card p {
+    font-size: 14px;
+    color: #bbb;
+}

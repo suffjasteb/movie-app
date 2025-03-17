@@ -11,7 +11,7 @@ function fetchData($query) {
 
 // fungi untuk mencari film berdasarkan judul
 function searchMovies($title) {
-    return fetchData("s" . urlencode($title)); // Memanggil fetchData() dengan parameter pencarian judul
+    return fetchData("s=" . urlencode($title)); // Memanggil fetchData() dengan parameter pencarian judul
 } 
 
 // Fungsi untuk mendapatkan detail film berdasarkan ID

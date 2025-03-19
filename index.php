@@ -6,10 +6,15 @@ require_once "config.php";
 
 $movies = null; // Inisialisasi variabel $movies sebagai null
 $page = rand(1, 50);
+$error = null;
 
 
 if (isset($_GET['search'])) { // Mengecek apakah ada pencarian yang dikirim via URL 
     $movies = searchMovies($_GET['search']); // query = yang di search user
+
+    if (!$movies || $movies['Response'] == "False") {
+        $error = $movies["Error"];
+    }
 }
 ?>
 
@@ -17,7 +22,7 @@ if (isset($_GET['search'])) { // Mengecek apakah ada pencarian yang dikirim via 
 
 
 <!-- menampilkan hasil pencarian -->
-<div class="row">
+<div class="row justify-content-center ">
     <?php if ($movies && $movies["Response"] == "True") :?>
         <?php foreach($movies["Search"] as $movie) : ?>
             <div class="col-md-4">
@@ -34,9 +39,9 @@ if (isset($_GET['search'])) { // Mengecek apakah ada pencarian yang dikirim via 
   </div>
 </div>
 <?php endforeach; ?>
-<?php elseif ($movie) : ?> 
-    <h3 class="text-center text-danger" ><?= $movie['Error'] ?></h3>
-<?php endif; ?>
+< <?php elseif ($error) : ?> 
+    <h3 class="text-center text-danger"><?= $error ?></h3>
+    <?php endif; ?>
 </div>
 
 <?php require_once 'includes/footer.php' ?>
